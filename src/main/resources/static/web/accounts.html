@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Accounts</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="Título de la WEB">
+    <meta name="description" content="Descripción de la WEB">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--    // <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">//-->
+    <link rel="stylesheet" href="../style/accounts.css">
+
+
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="../assets/logocolor.jpg" alt="logo">
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">Virtual Bank</span>
+                        <span class="profession">Bank +</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+
+            <div class="menu-bar">
+                <div class="menu">
+
+                    <li class="search-box">
+                        <i class='bx bx-search icon'></i>
+                        <input type="text" placeholder="Search...">
+                    </li>
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bxs-user-account icon bx-tada-hover'></i>
+                                <span class="text nav-text">Accounts</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="loan-aplication.html">
+                                <i class='bx bx-money-withdraw icon bx-tada-hover'></i>
+                                <span class="text nav-text">Loans</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="cards.html">
+                                <i class='bx bx-credit-card icon bx-tada-hover'></i>
+                                <span class="text nav-text">Cards</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-pie-chart-alt icon bx-tada-hover'></i>
+                                <span class="text nav-text">Analytics</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-heart icon bx-tada-hover'></i>
+                                <span class="text nav-text ">Likes</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-wallet icon bx-tada-hover'></i>
+                                <span class="text nav-text ">Wallets</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="mode">
+                        <a>
+
+                            <button>
+                                <i class='bx bx-log-out icon' @click="logOut()"></i>
+                                <span class="text">Logout</span>
+
+                            </button>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+
+                </div>
+            </div>
+            <div></div>
+
+        </nav>
+
+        <main>
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col mt-4"><ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">FAQs</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">About</button>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active ml-3" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
+                        <div class="tab-pane fade" id="pills-profile ml-3" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+                        <div class="tab-pane fade" id="pills-contact ml-3" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
+                      </div></div>
+                </div>
+
+                <div class="row m-2 me-3 d-flex flex-wrap ml-5">
+                    <div class="col"></div>
+                    <div class="col" style="width: 50%">
+                        <div class="card text-white bg-info mb-5 border-primary" style="max-width: 25rem;">
+                            <div class="card-header fs-3">Client</div>
+                            <div class="card-body">
+                                <p class="card-text fs-3">Name: {{clients.firstName}}</p>
+                                <p class="card-text fs-3">Last Name: {{clients.lastName}}</p>
+                                <p class="card-text fs-3">email: {{clients.email}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col" style="width: 50%">
+                        <div class="card text-white bg-success mb-1 border-secondary fs-3 ml-5"
+                            style="max-width: 25rem;">
+                            <div class="card-header">Accounts</div>
+                            <div class="card-body" v-for="account in accounts" v-show="account.activeAccount==true">
+                                <p class="card-text">Type:
+                                    {{account.type.substring(0,1)}}{{account.type.substring(1,27).replaceAll("_"," ").toLowerCase()}}</p>
+                                <p class="card-text">Number of account: {{account.number}}</p>
+                                <p class="card-text">Creation Date: {{account.creationDate}}</p>
+                                <p class="card-text">Balance of account:{{account.balance}}</p>
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col"> <button @click="deleteAccount(account.id)">Eliminar
+                                            Cuenta</button></div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" v-if="cuentasActivas.length<3" >
+                       Crear Cuenta
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Seleccione Tipo de Cuenta</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <select v-model="tipoDeCuenta">
+                                        <option value="CAJA_DE_AHORRO_EN_PESOS">Caja de Ahorro en pesos</option>  
+                                        <option value="CUENTA_CORRIENTE_EN_DOLARES">Cuenta Corriente en pesos</option>   
+                                        <option value="CAJA_DE_AHORRO_EN_DOLARES">Caja de Ahorro en dolares</option>      
+                                        <option value="CUENTA_CORRIENTE_EN_PESOS">Caja de Ahorro en dolares</option>                                                                       
+                                    </select>
+
+    
+                                   
+                                </div>
+
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" @click="createAccount()">Crear Cuenta</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/accounts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+            } else {
+                modeText.innerText = "Dark mode";
+
+            }
+        });
+
+    </script>
+
+
+
+    </main>
+
+    </div>
+    <footer>
+
+        <div class="container">
+            <footer class="py-5">
+              <div class="row">
+                <div class="col-2">
+                </div>
+          
+                <div class="col-2">
+                </div>
+          
+                <div class="col-2">
+                  <h5 class="text-muted">Section</h5>
+                  <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Profile</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                  </ul>
+                </div>
+          
+                <div class="col-4 offset-1">
+                  <form>
+                    <h5 class="text-muted">Subscribe to our newsletter</h5>
+                    <p class="text-muted">Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex w-100 gap-2">
+                      <label for="newsletter1" class="visually-hidden">Email address</label>
+                      <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                      <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-6"></div>
+
+          
+              <div class="d-flex justify-content-between py-4 my-4 border-top ml-4 offset-4">
+                <p class="text-muted">© 2021 Company, Inc. All rights reserved.</p>
+                <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+              </div>
+
+
+              <div class="col offset-4">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjBJREFUSEuNlu15GkEMhF9VkBJIKohdAZRgV+BLBcYVcFQQXIGhgjgdUALpAHeQVKA8+3Ur7S5Pcn9YtHs70mg0ICyPAFq/mtXtnfHb9nxYe4i4KwgaPhrMHPgfxHyrA+jAYkAm0DVwB3KXES/AReBdhZ+h8JxX3K7rkOhtKh6A78DnIW/pmrB1BV6A93LuBkWu/APw7NLqUDKNqcpA6UETkHtSBbY+OIA811oNmaV8G/LcvKJsbVelKedB4UcrLHPmQ2Crhg5gBnYm7cdIlyHE5hP4XOWSlnhW1B80NDpybp8GQK6gX2w/ykWToG9FmjXrJZUTGhVV3t0IrBU2QFgvshZ4LFWaHnAEnroOlZmAfaYjHAkKS1S2kknnTypMUbIGOWj761iSMWoBZpBdpK6qyA7mBeG+AqRbzeB2aQ0A2I0HeolGdqyKjBG5mbA09ozAGWRde7PMRwIwlGQFpYjJziThPSqf+Q3yqTGtX8lafAVHgafeT8P9NepnMmYycsUTscniKJoE3saGHS/aozLnCZ9R34Oma9+UqMrO7K4qrLxdL69WFQkRoFNcOvpRDdJXYPQ91McecgXRHmTXUZcQk1WU8R3oPjlpP0R7lDn3oFbgm/IKbB1ddd+Fj6B5qi1FvgdNEidg6vIaqKJUHuwgVLPKEJUi34PAebDohRbLyk2N10PR4DYIZzQpI2UqG0HPVi0DiQ9+MsfzP2jV0E6Gwmp/0Uzy/T+Zf+PbaRf+Al399x+vtMRRAAAAAElFTkSuQmCC"/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAgRJREFUSEuFleF9EzEMxf+agG4AG3BMQJiAMEFhgjYTQCYgI7AB1wnIBm03SCegTCB+sn0+2ae7+FOiky3p6elJsCOACoKiyVBM3S9vddeolxZ3843wpJhrH729OK75uwDe5cqtIPB2gAJRnHOBLog5P9rCO8c3ez3J/QZ4rVgHvQHM5w5kL+igcAF+CRw1R9wD4/RsH8CczeFpA/4zwkdrUAeL3RlADqCn6aM4pwF4RHhF+SJwzk325csA+tjzzCVjQZ4FTpqSFHKAGV91ND2pcEQNsnqsut/LADXNfwWBcwvRXMaI8LlGzF6jwFiw/gD83AjwUHpTKN40OTXvHcKI8rZrftuSBScrjEfgRzMmjmo3oH/7zl15ue20cEA59XPoiXpRcvbB2G0UVb0NwoaBjkXJyZh0Bnnjhy5AJJrJlwRxp2N5Dtp096jcghpj5s9+kgNdEDgoDh7n38/UDuTPVYlslFBeSvWe0jW5aGiNCd+XjWh1yV38lKCN9DLGt+qSMeI2ysDZvpkWrTHAS4W7IzvQuzyVbQrun03tfft43LPp4V3SEOF9N8nN4BZpeUDlHvQybcN1qfd55y32FVIFAylYcnguMj6CmhSb6m6fDRZ11FxbJu28+n3u++H2QZBQwPfF3BRDHGBa+p1mX932gb83tbUte9AvmdyZtWrWOlH8/wPeUNAfIsBITwAAAABJRU5ErkJggg=="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkJJREFUSEudlTGOE0EQRV8lJAQ4ISHBmyOwL8D6BpgQCQmTIgHaE7DcYBdBvGuERLh7g11OgOECmJiIiLBQ99TMVE33MBIT2O12Tf+q/6t+C90jCIoKoJC/+g+Lsj+LX/Zudb9HCKs6QCU4YmKpdRmmv+OebeRqirVP0ZcagXvMVFkVgIXAa4UVMPdJFqzBHuQa9BTYDbNtAPwjbFA58xVkUSqBxb7wHOU8HtdVkHNbAF/j1piAI+LBsqmkOWVYQUJ/NsZoBM5RvxHWaKbyjbXeFnTTniG+WwTdK9ztADzhwhaVHegs6WKJpEyXIGvQiwYgacKBrYsKamR/A9YIe1RuG++/gETnOcItlJnArO06m6CufzwjEaDJ6AC4AzwFOQRNMV+ATwJ/NGtWtGxHfdBA7G2HuAXZCPpB4YXr6LR8L/BS4RLkUd9RHa//qqDrnCPgo2V8byDyd+ABcJwEjsOl0lIxVcFb4B1wBdyPFWTBU0tmgL7qWgU9vLZ0Wn2pczY2pa8GFJ0IHP03Rb2l5sG5ATwBeWgTnkT+DNxEuEq2209+lly8K3dN0Bi1e6yvBR5r6TMrgQuFWTOxrTlGbYcaxEGLI33ZW0CegbXn3d0laW4W7YUS3DQPTraKwuSrxlNx1hS3BcwqBl4kMFf4MelFFhCdpOVXlqC7WEE8cQNy5u/NAb/j+DW7Lq7GZmMOeoywQp351agTfqJcAydOo+CXvuBIv6H3AlauyTG5XGhVwOnNiZNd2pNnjXRLGJhCJ8P/C8Nk7iBxGEojAAAAAElFTkSuQmCC"/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAb1JREFUSEuNlYFRwzAMRZ8moBvABrBB2wlgA9iAblBGKBMAG8AEpBuUDRihTGAusRPLlnxu79pLGtn6//vrRwQI0w/20/o/VebHZaG+G69NOdQlubvpaRDaZuV+hkebRt471TilikGLiCCERUYN2AdfMejI7CuoWTZQz6IWDAQ2AZ6BVfrejXtpKSY29pCH5JJfkFchnJYaBWAj8O0sjhbrOK2SawsM46LIID79FMJ94VbfMgv+zMYc8hfwMG2tvDwIYW3HoWVZx/uZxhHYVA2StKlIOydBHmm/A9fxvqNZLEgSxRURvG5QzsRsiBdgB1w5s69bS30GIedF8n7plgVRmFwmBwiPTSKWgagGFnry0azOisA+MamILOAUg0is0aBcAGGHsCew6gxpbKCKlIHceNgSeANuZhrZCGU98IcwstRzwEngVp106wyd0DKHdQyFTVuD5rQwYefD+EB4qhkUUdGBbw62ipMUFeUcjHqNYfeUdWYdvZwDLu9cxMOPwDnAGTgIDE7YXRzcXXJF+nYHvpokvdi8yE3mFRI1nlbpV8Wya4PinWGy8hKlHCxVCC3BpgfNomnBdUC0gP4DU/7MHxm83fcAAAAASUVORK5CYII="/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAg1JREFUSEuNluF12zAMhD9MYI/QDeoN7GzgTtCM0E26QrKBO0GkDTpCR2gnQB9IUAJJyC/8kehRIA64O0IWAbT8oS5/3reSlzHQj8V/8aw9b0mT2PJSUMePz/2xZ2X0pX+mupjtKD4w4aWUnQXhekxXTkTfuSygL21vpKgpEc705U6aJcIJSJQ0ktn2/wEPV/0u6GnwwCBXdMZWwgYdgz2PvIO+VkfJG+j3ZrFd8IGYYER3RnFmpWhf6jZ9BxyAN8ABcp+lTp1FLmGNib+Fohp0B85zkslKkWov3Gy93YNyoHVgGvz2pBfghLB6y19UOKM8BP4oVoB83WvrqZ8pqllXgVttp9ju6tfRKnpV4YFiXbb1A/jZpkCLbbVnIq+COgCLwLXTa7q2ZcMAT56scrMd2g80DVbg5i4aOzgrfIBcQL/tdmYBrNNauLtVBqmaTVdQB5g6uFEAyvqFcHdrJACZTRMNBL1qnXNWmFFXAARWFW4+jnuArZWggBQbVZELRXW1gzYBjFjvoCCu6nECixaKhps8UVTfV4ocYBA5UuSFTINyc+ehTY9E9v0Pp8s7eAIwOE7962aWixfNbrJRZcueL05FFmckPZmmcTDGGxJES2Z6F1kADmzqgvYo+TcgQazHgkGE7h7siRKAmK9Vt32rYwO9bcKw64OO5v5xquzHQ9bBlGEaPMe/QpIJ/h/hs+gfQPf1pwAAAABJRU5ErkJggg=="/>
+                
+                </div>
+
+            </footer>
+          </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
+
+
+
